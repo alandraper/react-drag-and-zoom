@@ -63,7 +63,7 @@ class DragAndZoom extends PureComponent {
       isScrolling: true,
     });
 
-    onZoom(zoom, e);
+    onZoom && onZoom(zoom, e);
   };
 
   handleMouseMove = e => {
@@ -117,7 +117,7 @@ class DragAndZoom extends PureComponent {
                 transformOrigin: `${this.state.originX}% ${this.state.originY}%`,
               }}
             >
-              {this.props.children}
+              {children}
             </div>
           </div>
         </Draggable>
